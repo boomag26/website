@@ -1,0 +1,494 @@
+/* Se quiser manter o Tailwind, deixa esse import */
+@import "tailwindcss";
+
+/* Variáveis básicas – ok deixar, mas não vamos forçar nada no body */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* Dark mode opcional – não atrapalha o template */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* NÃO sobrescrever fonte e background do template */
+body {
+  background-color: transparent;
+  color: inherit;
+  margin: 0;
+}
+
+/* Tamanho REAL das logos */
+.brand-area .marquee__item img {
+  height: 50px !important;
+  width: auto !important;
+  max-width: none !important;
+  opacity: 1 !important;
+}
+
+/* ================================ */
+/* Formulário sempre com fundo branco */
+/* ================================ */
+
+body input,
+body textarea,
+body select {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+body input::placeholder,
+body textarea::placeholder {
+  color: #616060 !important;
+}
+
+body input:focus,
+body textarea:focus {
+  outline: none;
+}
+
+/* ================================ */
+/* Seletor de idiomas */
+/* ================================ */
+
+.language-selector .lang-current {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  background: #b5e1c3;
+}
+
+.language-selector .flag {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.language-selector .arrow-img {
+  width: auto;
+  height: auto;
+}
+
+.language-selector .lang-options {
+  margin-top: 8px;
+  padding: 12px 24px;
+  border-radius: 16px;
+  background: #ffffff;
+  list-style: none;
+  display: none !important;
+}
+
+.language-selector .lang-options.show {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 20px;
+}
+
+.language-selector .lang-options li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.language-selector .lang-options li:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.language-selector .lang-options li.active {
+  background: #ffffff33;
+  border: 0px solid #ffffff;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* ================================ */
+/* Ícones de serviços */
+/* ================================ */
+
+.service__item .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service__item .icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* ================================ */
+/* HERO MOBILE */
+/* ================================ */
+
+@media (max-width: 1199px) {
+  .banner-three__image {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 320px;
+    margin: 105px auto 0 !important; /* já desce o bloco todo */
+    bottom: auto !important;
+    right: auto !important;
+  }
+
+  .banner-three__image .boom-fade-wrapper {
+    position: relative !important;
+    width: 100% !important;
+    height: 350px !important;
+    margin: 0 auto !important;
+    overflow: visible !important;
+  }
+
+  .banner-three__image .boom-fade-wrapper img.boom-fade-img {
+    position: absolute !important;
+    top: auto !important;
+    bottom: 0px !important;
+    left: 40% !important;
+    transform: translateX(-50%) !important;
+    width: auto !important;
+    max-width: 125% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+
+  .banner-three__image .here-bg {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 150% !important;
+    max-width: 420px !important;
+    z-index: -1 !important;
+  }
+}
+
+/* ================================ */
+/* FEATURE (diferenciais) – MOBILE */
+/* ================================ */
+
+@media (max-width: 991px) {
+  .feature-three-area .section-header,
+  .feature-three-area .section-header h2,
+  .feature-three-area .section-header h5,
+  .feature-three-area .d-flex > p {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .feature-three-area .d-flex {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+  }
+
+  .feature-three__item {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .feature-three__item img {
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  .feature-three__item h3 {
+    text-align: center !important;
+  }
+
+  .feature-three__item p {
+    max-width: 260px !important;
+    margin: 0 auto !important;
+    white-space: normal !important;
+    text-align: center !important;
+  }
+}
+
+/* ================================ */
+/* AUDIÊNCIA – DESKTOP x MOBILE */
+/* ================================ */
+
+.audience-desktop {
+  display: block;
+}
+
+.audience-mobile {
+  display: none;
+}
+
+/* MOBILE: até 767px */
+@media (max-width: 767px) {
+  .feature-three-area2 .audience-desktop {
+    display: none;
+  }
+
+  .feature-three-area2 .audience-mobile {
+    display: block;
+  }
+
+  .feature-three-area2 .audience-mobile-card {
+    background: #f5eeff;
+    border-radius: 20px;
+    padding: 20px 18px;
+    margin-bottom: 18px;
+  }
+
+  .feature-three-area2 .audience-mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .feature-three-area2 .audience-mobile-number {
+    font-size: 32px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .feature-three-area2 .audience-mobile-text {
+    margin-bottom: 0;
+  }
+
+  .feature-three-area2 .audience-mobile-card .about-four__icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+}
+
+/* AJUSTES GERAIS AUDIÊNCIA – MOBILE */
+@media (max-width: 767.98px) {
+  .feature-three-area2,
+  .feature-three-area2 .about-four__wrp {
+    background: transparent !important;
+  }
+
+  .feature-three-area2 .feature-three__container2 {
+    max-width: 100%;
+    padding: 40px 12px !important;  /* 40 em cima/baixo, 12 lados */
+    background-color: #ffffff !important;
+    border-radius: 24px !important;
+  }
+
+  .feature-three-area2 .about-four__item {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* ================================ */
+/* FAQ – MOBILE */
+/* ================================ */
+
+@media (max-width: 767.98px) {
+  .faq-area {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .faq-area__bg {
+    background: #ffffff !important;
+    border-radius: 24px !important;
+    padding: 32px 20px !important;
+    margin: 10px auto !important;
+    width: calc(100% - 32px) !important;
+  }
+
+  .faq-area__bg .section-header-four,
+  .faq-area__bg p,
+  .faq-area__bg h2,
+  .faq-area__bg h5 {
+    padding-right: 4px !important;
+  }
+
+  .accordion-item {
+    border-radius: 20px !important;
+    padding: 12px 4px !important;
+  }
+
+  .accordion-item + .accordion-item {
+    border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+  }
+
+  .feature-three__container3 {
+    background-color: #ffffff !important;
+    padding: 50px 20px !important;
+    margin: 0 16px 60px !important;
+    border-radius: 24px !important;
+  }
+
+  .faq-area .accordion-item,
+  .faq-card,
+  .accordion-box {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .faq-area .accordion-button,
+  .accordion-button {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+    white-space: normal !important;
+  }
+
+  .accordion-two .accordion .accordion-item,
+  .accordion-four .accordion .accordion-item {
+    background-color: #ffffff !important;
+    border: none !important;
+    border-bottom: 1px solid var(--border) !important;
+    border-radius: 0px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .accordion-two .accordion .accordion-button.collapsed,
+  .accordion-four .accordion .accordion-button.collapsed {
+    background-color: #ffffff !important;
+    color: var(--heading-color) !important;
+  }
+}
+
+/* ================================ */
+/* CONTATOS – esconder infos no mobile */
+/* ================================ */
+
+@media (max-width: 767.98px) {
+  /* bloco completo de endereços (segundo .mb-30) */
+  .contact__content .mb-30:nth-of-type(2) {
+    display: none !important;
+  }
+
+  /* bloco de horário comercial (último div) */
+  .contact__content > div:last-child {
+    display: none !important;
+  }
+}
+
+/* ================================ */
+/* SOLUÇÕES x AUDIÊNCIA – espaçamento */
+/* ================================ */
+
+@media (max-width: 767.98px) {
+  /* reduzir padding-bottom da seção de Soluções */
+  #solutions.service-two-area.pt-120.pb-120 {
+    padding-bottom: 30px !important;
+  }
+}
+
+/* ================================ */
+/* ESPAÇAMENTO GLOBAL ENTRE SEÇÕES – MOBILE */
+/* ================================ */
+
+@media (max-width: 767.98px) {
+  .pt-120 {
+    padding-top: 40px !important;   /* antes 120 */
+  }
+
+  .pb-120 {
+    padding-bottom: 40px !important; /* antes 120 */
+  }
+}
+/* ===== HAMBURGER MOBILE AJUSTADO ===== */
+@media (max-width: 991.98px) {
+
+  /* Reset completo */
+  .menubars span {
+    all: unset !important;
+  }
+
+  .header-area .menubars {
+    width: 56px !important;
+    height: 56px !important;
+    border-radius: 12px !important;
+    background-color: #00332c !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important; /* 🔥 Menor espaçamento entre as linhas */
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  .header-area .menubars span {
+    width: 28px !important;  /* 🔥 Tamanho igual ao da linha ideal */
+    height: 3px !important;  /* 🔥 Mesma espessura */
+    background: #20c55d !important; /* Verde correto */
+    border-radius: 999px !important;
+    display: block !important;
+    position: relative !important;
+  }
+}
+/* Forçar as 3 linhas exatamente iguais no mobile */
+@media (max-width: 991.98px) {
+  .header-area .menubars span:first-child,
+  .header-area .menubars span:nth-child(2),
+  .header-area .menubars span:last-child {
+    width: 28px !important;
+    height: 3px !important;
+    background: #20c55d !important;
+    border-radius: 999px !important;
+    display: block !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+    transform: none !important;
+  }
+}
+/* ====== DESKTOP: espaçamento uniforme entre itens do menu ====== */
+@media (min-width: 992px) {
+  .header-area .main-menu > nav > ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;                 /* espaço IGUAL entre todos os itens */
+  }
+
+  .header-area .main-menu > nav > ul > li {
+    margin: 0 !important;      /* zera qualquer margin antiga */
+    padding: 0 !important;
+  }
+}
+
+/* ====== MOBILE (offcanvas): tirar “respiro extra” do primeiro item ====== */
+@media (max-width: 991.98px) {
+  /* lista de links dentro do offcanvas #menubar */
+  #menubar .offcanvas-body nav ul {
+    padding-top: 0 !important;     /* tira espaço demais em cima */
+  }
+
+  #menubar .offcanvas-body nav ul li {
+    margin-top: 12px !important;   /* mesmo espaço pra todos */
+  }
+
+  #menubar .offcanvas-body nav ul li:first-child {
+    margin-top: 12px !important;   /* garante que o primeiro não fique distante */
+  }
+}
