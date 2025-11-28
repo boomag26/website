@@ -1,7 +1,5 @@
-// app/page.tsx
+import { redirect } from "next/navigation";
 
-export default function RootPage() {
-  // Normalmente o usuário nunca verá isso, porque o middleware
-  // já redireciona / -> /{lang} antes de chegar aqui.
-  return null;
+export default function Root() {
+  redirect("/pt");
 }
