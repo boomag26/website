@@ -492,3 +492,7 @@ body textarea:focus {
     margin-top: 12px !important;   /* garante que o primeiro não fique distante */
   }
 }
+/* Esconde o preloader quando adicionarem a classe "loaded" no body */
+body.loaded #loading {
+  display: none !important;
+}
