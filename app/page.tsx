@@ -1,5 +1,6 @@
-import { redirect } from "next/navigation";
+// app/page.tsx
+import HomeLang from "./[lang]/page";
 
 export default function Root() {
-  redirect("/pt");
+  return <HomeLang params={{ lang: "pt" }} />;
 }
