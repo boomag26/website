@@ -22,7 +22,7 @@ const pt = {
   // Hero / Banner
   hero: {
     badge: "ESTRATÉGIA E RESULTADO.",
-    title: "Hub pioneiro em mídia de performance para o público gamer.",
+    title: "Hub pioneiro em performance para o público gamer.",
     description:
       "Através de dados proprietários, clusterização gamer e tecnologia de performance, geramos aquisição, conversão e impacto de negócio, com total previsibilidade e mensuração.",
     inputPlaceholder: "Insira sua URL",
