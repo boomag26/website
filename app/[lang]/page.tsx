@@ -319,17 +319,6 @@ const handleSubmitContact = async (e: FormEvent<HTMLFormElement>) => {
   return (
     <>
       <main>
-        {/* Preloader area start */}
-        <div id="loading" className="preloader">
-          <div className="loading-overlay"></div>
-          <div className="custom-loader">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
-        {/* Preloader area end */}
 
         {/* Top header area start here */}
         <div className="header-top d-none d-lg-block">
